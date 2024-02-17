@@ -20,5 +20,6 @@ These people have helped this project in some way or another, so they should be 
 - [Pixel Experience Team](https://download.pixelexperience.org/about)
 - [phhusson](https://github.com/phhusson)
 - [AndyYan](https://github.com/AndyCGYan)
+- [ponces](https://github.com/ponces)
 - [eremitein](https://github.com/eremitein)
 - [kdrag0n](https://github.com/kdrag0n)
