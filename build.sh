@@ -10,6 +10,7 @@ set -e
 
 BL=$PWD/treble_build_pe
 BD=$HOME/builds
+SYNC=$2
 BRANCH=$1
 
 [ "$BRANCH" == "" ] && BRANCH="twelve"
@@ -110,8 +111,15 @@ generatePackages() {
 START=`date +%s`
 BUILD_DATE="$(date +%Y%m%d)"
 
-initRepos
-syncRepos
+if [ "$SYNC" == "sync" ]; then
+    initRepos
+    syncRepos
+elif [ "$SYNC" == "no-sync" ]; then
+    echo "Skipping sync..."
+elif [ "$SYNC" == "" ]; then
+    echo "Specify synchronization status!"
+    exit 1
+fi
 applyPatches
 setupEnv
 buildTrebleApp
