@@ -9,9 +9,10 @@ echo
 set -e
 
 BL=$PWD/treble_build_pe
-BD=$HOME/builds
+BD=/home/builds
 SYNC=$2
 BRANCH=$1
+sudo mkdir -p $BD
 
 [ "$BRANCH" == "" ] && BRANCH="twelve"
 [ "$BRANCH" == "twelve" ] && BUILD="PixelExperience" || BUILD="PixelExperience_Plus"
