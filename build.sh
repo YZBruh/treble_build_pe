@@ -8,6 +8,7 @@ echo
 
 set -e
 
+PWD=$(pwd)
 BL=$PWD/treble_build_pe
 BD=/home/builds
 SYNC=$2
